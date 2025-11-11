@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 760px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.hidden { display: none; }
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button { background: #0078D7; color: #fff; border: none; cursor: pointer; }
+button:hover { background: #005fa3; }
+.quiz-controls { display:flex; gap:10px; justify-content:space-between; }
+.quiz-controls button { width:32%; }
+#btn-quit { background: #dc3545; }
+#btn-quit:hover { background: #b02a37; }
+.stats-tabs { display:flex; justify-content:center; gap:8px; margin-bottom:12px; }
+.stats-tab { padding:8px 14px; border-radius:6px; background:#eee; border:none; cursor:pointer; }
+.stats-tab.active { background:#0078D7; color:white; }
+.stats-cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap:12px;
+}
+.stats-card {
+    background:#f9f9f9; padding:10px; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align:center; transition: transform .15s;
+}
+.stats-card:hover { transform: translateY(-4px); }
+.bar-container { display:flex; height:18px; border-radius:10px; overflow:hidden; background:#e6e6e6; margin:10px 0; }
+.bar { height:100%; }
+.bar.bonnes { background:#28a745; }
+.bar.mauvaises { background:#dc3545; }
+.stats-card.moins-bonne { border: 2px solid #dc3545; }
+.admin-profile-card {
+    background:#fff; padding:12px; border-radius:8px; margin-bottom:10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align:left;
+}
+.admin-profile-card h3 { margin:0 0 8px 0; }
+.admin-profile-card p { margin: 4px 0; }
+.admin-profile-card button { width:48%; display:inline-block; margin-right:4%; margin-top:8px; }
+.admin-profile-card .btn-reset { background:#ffc107; color:#000; }
+.admin-profile-card .btn-suppr { background:#dc3545; }

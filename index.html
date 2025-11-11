@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiz France</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="profil-section" class="container">
+    <h2>Entrez votre profil :</h2>
+    <input type="text" id="profil" placeholder="Nom du profil">
+    <button id="btn-profil">Valider</button>
+</div>
+
+<div id="menu-jeux" class="container hidden">
+    <h2>Menu des jeux</h2>
+    <button id="btn-departements">Jeu des Départements</button>
+    <button id="btn-capitales">Jeu des Capitales</button>
+    <button id="btn-stats">Voir mes statistiques</button>
+    <button id="btn-quit">🚪 Quitter le site</button>
+</div>
+
+<div id="quiz-section" class="container hidden">
+    <h2 id="question"></h2>
+    <input type="text" id="reponse" placeholder="Votre réponse">
+    <div id="correction"></div>
+
+    <div class="quiz-controls">
+        <button id="btn-valider">Valider</button>
+        <button id="btn-suivant">Suivant</button>
+        <button id="btn-retour">Retour au menu</button>
+    </div>
+</div>
+
+<div id="stats-section" class="container hidden">
+    <h2>Mes Statistiques</h2>
+
+    <div class="stats-tabs">
+        <button class="stats-tab active" data-type="departement">Départements</button>
+        <button class="stats-tab" data-type="capitale">Capitales</button>
+    </div>
+
+    <div id="stats-cards" class="stats-cards"></div>
+
+    <button id="btn-stats-retour">Retour au menu</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
